@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="/css/StyleSheet.css">
+
+<title>Edit permit</title>
+</head>
+<body th:style="'background: url(/images/bkgfabric01.jpg) repeat center center fixed;'">
+    <div align="center">
+        <h1>Edit permit</h1>
+        <br />
+        <form action="#" th:action="@{/action}" th:object="${permit}"
+            method="post">
+ 
+            <table border="0" cellpadding="10">
+                <tr>              
+                    <td>permit ID:</td>
+                    <td>
+                        <input type="text" th:field="*{id}" readonly="readonly" />
+                    </td>
+                </tr>         
+                <tr>              
+                    <td>Student First Name:</td>
+                    <td>
+                        <input type="text" th:field="*{first_name}" />
+                    </td>
+                </tr>
+				<tr>              
+                    <td>Student Last Name:</td>
+                    <td>
+                        <input type="text" th:field="*{last_name}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Permit Spot:</td>
+                    <td><input type="text" th:field="*{spot_nbr}" /></td>
+                </tr>
+                <tr>
+                    <td>Car Color:</td>
+                    <td><input type="text" th:field="*{car_color}" /></td>
+                </tr>
+                <tr>
+                    <td>Car Make:</td>
+                    <td><input type="text" th:field="*{car_make}" /></td>
+                </tr>
+                <tr>
+                    <td>Car Model:</td>
+                    <td><input type="text" th:field="*{car_model}" /></td>
+                </tr>
+                <tr>
+                    <td>Car Tag:</td>
+                    <td><input type="text" th:field="*{car_tag_nbr}" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                    	<button class="Button" type ="submit" name="action" value="edit"> EDIT</button>
+                		&nbsp;&nbsp;
+	    				<button class="Button" type ="submit" name="action" value="cancel">CANCEL</button>
+	    				</td>
+	    				</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>l>

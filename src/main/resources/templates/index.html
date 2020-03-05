@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="/css/StyleSheet.css">
+
+ <div class="container">
+        <h1>
+            <!-- include image from static resources -->
+            <img th:src="@{/images/aaa.png}" alt="memorynotfound logo"/>
+            &nbsp;&nbsp;
+             Arkansas Arts Academy Parking App
+        </h1>
+    </div>
+<title>Permit Manager</title>
+</head>
+<body th:style="'background: url(/images/bkgfabric01.jpg) repeat center center fixed;'">
+<div align="center">
+ <h1><a th:href="@{/new}">
+    <button class="btn btn-blue btn-fill-horz" type="submit">New Permit</button>
+    </a></h1>  
+   <h3>Parking Permit List</h3> 
+    <br/>
+    <table class="bluestripes"  border="2" cellpadding="25">
+        <thead>
+            <tr>
+                <th>Permit ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Spot Nbr</th>
+                <th>Car Make</th>
+                <th>Car Model</th>
+                <th>Color</th>
+                <th>Car Tag Nbr</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="permit : ${listpermits}">
+                <td th:text="${permit.id}">Permit ID</td>
+                <td th:text="${permit.first_name}">>Last Name</td>
+                <td th:text="${permit.last_name}">>First Name</td>
+                <td th:text="${permit.spot_nbr}">>Spot Nbr</td>
+                <td th:text="${permit.car_model}">Car Make</td>
+                <td th:text="${permit.car_make}">Car Model</td>
+                <td th:text="${permit.car_color}">Color</td>
+                <td th:text="${permit.car_tag_nbr}">Car Tag Nbr</td>
+                <td>
+	                 <a th:href="@{'/edit/' + ${permit.id}}"> 
+	                 <button class="myButton-edit" type="submit">EDIT</button>
+	                 </a>
+	                 &nbsp;&nbsp;&nbsp;
+	                 <a th:href="@{'/delete/' + ${permit.id}}">
+	                 <button class="myButton-delete" type="submit">DELETE</button>
+	                 </a>
+              </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html>
