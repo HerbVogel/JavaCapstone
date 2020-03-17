@@ -22,7 +22,7 @@
     </a></h1>  
    <h3>Parking Permit List</h3> 
     <br/>
-    <table class="bluestripes"  border="2" cellpadding="25">
+    <table class="blueTable"  border="9" cellpadding="25">
         <thead>
             <tr>
                 <th>Permit ID</th>
@@ -36,6 +36,13 @@
                 <th>Actions</th>
             </tr>
         </thead>
+        <tfoot>
+<tr>
+<td colspan="9">
+<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+</td>
+</tr>
+</tfoot>
         <tbody>
             <tr th:each="permit : ${listpermits}">
                 <td th:text="${permit.id}">Permit ID</td>
@@ -45,12 +52,12 @@
                 <td th:text="${permit.car_model}">Car Make</td>
                 <td th:text="${permit.car_make}">Car Model</td>
                 <td th:text="${permit.car_color}">Color</td>
-                <td th:text="${permit.car_tag_nbr}">Car Tag Nbr</td>
+                <td th:text="${permit.car_tag_nbr}">Car Tag </td>
                 <td>
 	                 <a th:href="@{'/edit/' + ${permit.id}}"> 
 	                 <button class="myButton-edit" type="submit">EDIT</button>
 	                 </a>
-	                 &nbsp;&nbsp;&nbsp;
+	            &nbsp;&nbsp;
 	                 <a th:href="@{'/delete/' + ${permit.id}}">
 	                 <button class="myButton-delete" type="submit">DELETE</button>
 	                 </a>

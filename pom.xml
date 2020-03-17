@@ -59,9 +59,6 @@
 			</exclusions>
 		</dependency>
 		
-<!-- Spring Security -->
-     	
-
 <!-- Optional, for bootstrap -->		
    		<dependency>
             <groupId>org.webjars</groupId>

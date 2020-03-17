@@ -1,23 +1,46 @@
-package net.codejava;
+package com.herb.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.validation.constraints.*;
 @Entity
 public class Permit {
 	
 private Long id;
+
+@NotNull
+@Min(01)
+@Max(50)
 private int spot_nbr;
+
+@NotNull
+@NotNull(message = "Name cannot be null")
+@Size(min = 1, max = 45, message = "Last Name must be between 1 and 30 characters")
 private String last_name;
+
+@NotNull(message = "Name cannot be null")
+@Size(min = 1, max = 45, message = "First Name must be between 1 and 30 characters")
 private String first_name;
+
+@NotNull
+@Size(min = 1, max = 20, message = "Model must be between 1 and 30 characters")
 private String car_model;
+
+@NotNull
+@Size(min = 1, max = 20, message = "Make must be between 1 and 30 characters")
 private String car_make;
+
+@NotNull
+@Size(min = 1, max = 20, message = "Color must be between 1 and 30 characters")
 private String car_color;
+
+@NotNull
+@Size(min = 1, max = 10, message = "Car Tag must be between 1 and 6 characters")
 private String car_tag_nbr;
 
-	protected Permit() {
+	public Permit() {
 	}
 
 	

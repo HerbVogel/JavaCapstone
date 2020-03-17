@@ -16,38 +16,43 @@
      			<tr>
                     <td>Parking Spot Nbr:</td>
                     <td><input type="text" th:field="*{spot_nbr}" /></td>
+                    <td class="validation-error" th:style= "${'color: red;'}" th:if="${#fields.hasErrors('spot_nbr')}" th:errors="*{spot_nbr}" >Name Error</td>
                 </tr>
                 <tr>
                     <td>First Name:</td>
                     <td><input type="text" th:field="*{first_name}" /></td>
+                    <td th:if="${#fields.hasErrors('first_name')}" th:style= "${'color: red;'}" th:errors="*{first_name}">Name Error</td>
                 </tr>
                 <tr>
                     <td>Last Name:</td>
                     <td><input type="text" th:field="*{last_name}" /></td>
-                </tr>
-               
-                <tr>
-                    <td>Car Model:</td>
-                    <td><input type="text" th:field="*{car_model}" /></td>
+                    <td th:if="${#fields.hasErrors('last_name')}" th:style= "${'color: red;'}" th:errors="*{last_name}">Name Error</td>
                 </tr>
                 <tr>
                     <td>Car Make:</td>
                     <td><input type="text" th:field="*{car_make}" /></td>
+                    <td th:if="${#fields.hasErrors('car_make')}" th:style= "${'color: red;'}" th:errors="*{car_make}">Name Error</td>
+                </tr>               
+                <tr>
+                    <td>Car Model:</td>
+                    <td><input type="text" th:field="*{car_model}" /></td>
+                    <td th:if="${#fields.hasErrors('car_model')}" th:style= "${'color: red;'}" th:errors="*{car_model}">Name Error</td>
                 </tr>
-                
                 <tr>
                     <td>Car Color:</td>
                     <td><input type="text" th:field="*{car_color}" /></td>
+                    <td th:if="${#fields.hasErrors('car_color')}" th:style= "${'color: red;'}" th:errors="*{car_color}">Name Error</td>
                 </tr>
                 <tr>
                     <td>Car Tag:</td>
                     <td><input type="text" th:field="*{car_tag_nbr}" /></td>
+                    <td th:if="${#fields.hasErrors('car_tag_nbr')}" th:style= "${'color: red;'}" th:errors="*{car_tag_nbr}">Name Error</td>                    
                 </tr>                             
                 <tr>
                     <td colspan="2">
-                		<button class="Button" type ="submit" name="action" value="save"> SAVE</button>
+                		<button class="myButton-edit" type ="submit" name="action" value="save"> SAVE</button>
                 		&nbsp;&nbsp;
-	    				<button class="Button" type ="submit" name="action" value="cancel">CANCEL</button>
+	    				<button class="myButton-delete" type ="submit" name="action" value="cancel">CANCEL</button>
 	    				</td>
                     
                 </tr>

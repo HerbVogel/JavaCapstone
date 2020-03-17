@@ -1,4 +1,27 @@
+.field-validation-error
+{
+    color: #ff0000;
+}
 
+.field-validation-valid
+{
+    display: none;
+}
+
+.validation-error] {
+color: red;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
 
 .myButton-edit {
 	box-shadow: 3px 4px 0px 0px #3e7327;
@@ -11,7 +34,7 @@
 	color:#ffffff;
 	font-family:Arial;
 	font-size:12px;
-	padding:7px 15px;
+	padding:2px 15px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5b8a3c;
 }
@@ -30,7 +53,7 @@
 	color:#ffffff;
 	font-family:Arial;
 	font-size:12px;
-	padding:7px 15px;
+	padding:2px 15px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
 }
@@ -70,6 +93,118 @@ table {
 table th, table td {
     padding: 5px;
 }
+
+
+
+
+table.TFtable{
+		width:90%; 
+		border-collapse:collapse; 
+	}
+	
+table.TFtable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}	
+table.TFtable td{ 
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	/* provide some minimal visual accomodation for IE8 and below */
+table.TFtable tr{
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the ODD background rows  */
+table.TFtable tr:nth-child(odd){ 
+		background: #b8d1f3;
+	}
+	/*  Define the background color for all the EVEN background rows  */
+table.TFtable tr:nth-child(even){
+		background: #dae5f4;
+	}
+
+
+table.blueTable {
+  border: 1px solid #1C6EA4;
+ background-color: #38DFEE;
+  width: 90%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.blueTable tbody td {
+  font-size: 13px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444444;
+}
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Code By Webdevtrick ( https://webdevtrick.com ) */
